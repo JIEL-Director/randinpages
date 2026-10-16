@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI력 사무소</title>
+    <meta name="description" content="AI를 몰라도 됩니다. 현장 사장님의 귀찮은 일 하나를 쓰시던 메신저 안에서 1주 안에 풀어 드립니다.">
+    <!-- 글꼴: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 내 CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS가 켜졌다는 표시를 먼저 단다. JS가 꺼져 있으면 모든 내용이 그냥 보인다 -->
+    <script>document.documentElement.classList.add('js');</script>
+    <!-- 내 JS: defer = HTML을 다 읽은 뒤 실행 -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- 상단 -->
+    <header class="site-header">
+        <div class="container">
+            <a href="#top" class="brand">
+                <span class="brand-mark" aria-hidden="true">AI</span>
+                <span class="brand-name">AI력 사무소</span>
+            </a>
+            <nav class="site-nav" aria-label="주요 메뉴">
+                <a href="#how">어떻게 하나요</a>
+                <a href="#promise">약속</a>
+                <a href="#now">지금 단계</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 히어로 -->
+        <section id="top" class="container row hero">
+            <div class="hero-text">
+                <p class="badge">시범 운영 중 · 2026년 가을</p>
+                <h1 class="display hero-title">AI를 몰라도 됩니다.<br>사진 한 장이면 됩니다.</h1>
+                <p class="hero-lead">현장에서 바쁜 사장님의 귀찮은 일 하나를, 이미 쓰시는 메신저 안에서 1주 안에 풀어 드립니다. 새로 배우실 것은 없습니다.</p>
+                <div class="hero-actions">
+                    <a href="#how" class="btn btn-dark">어떻게 하는지 보기</a>
+                    <a href="#now" class="btn btn-outline">지금 단계 보기</a>
+                </div>
+            </div>
+
+            <!-- 대화 예시 -->
+            <figure class="chat">
+                <div class="chat-box" data-chat>
+                    <div class="bubble bubble-me" data-chat-step>
+                        <div class="photo-slot">[현장 사진]</div>
+                        <p>이거 정리 좀 해 줘</p>
+                    </div>
+                    <div class="bubble bubble-me bubble-voice" data-chat-step>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                        <span>음성 메시지 0:42</span>
+                    </div>
+                    <div class="bubble bubble-them" data-chat-step>받았습니다. 오늘 저녁에 표로 정리해서 보내 드릴게요.</div>
+                    <div class="bubble bubble-them" data-chat-step>
+                        <strong>정리했습니다</strong>
+                        <span class="skeleton-line"></span>
+                        <span class="skeleton-line"></span>
+                    </div>
+                    <!-- 입력 중 표시: JS가 켜고 끈다 -->
+                    <div class="bubble bubble-them typing" hidden aria-hidden="true"><span></span><span></span><span></span></div>
+                </div>
+                <figcaption>주고받는 방식의 예시입니다 <button type="button" class="replay" data-chat-replay hidden>다시 보기</button></figcaption>
+            </figure>
+        </section>
+
+        <!-- 문제 -->
+        <section id="problem" class="band-dark">
+            <div class="container">
+                <h2 class="display section-title reveal">좋은 AI 도구는 이미 많습니다.<br><span class="highlight">쓸 사람에게 닿지 않을 뿐입니다.</span></h2>
+                <div class="row problems">
+                    <div class="problem reveal">
+                        <p class="problem-num">01</p>
+                        <h3>있는지 모릅니다</h3>
+                        <p>내 일에 맞는 앱이나 서비스가 이미 있어도 찾아볼 틈이 없습니다.</p>
+                    </div>
+                    <div class="problem reveal">
+                        <p class="problem-num">02</p>
+                        <h3>쓰는 법을 모릅니다</h3>
+                        <p>찾아도 무엇을 어떻게 넣어야 결과가 나오는지 알기 어렵습니다.</p>
+                    </div>
+                    <div class="problem reveal">
+                        <p class="problem-num">03</p>
+                        <h3>현장에서 타이핑할 수 없습니다</h3>
+                        <p>장비 위에서, 현장 한가운데서 긴 글을 쓰는 일은 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 어떻게 -->
+        <section id="how" class="container section">
+            <p class="eyebrow">어떻게 하나요</p>
+            <h2 class="display section-title reveal">문제 하나를 1주 안에 풉니다</h2>
+            <div class="row steps">
+                <div class="step reveal">
+                    <span class="step-num">1</span>
+                    <h3>듣기</h3>
+                    <p>「요즘 제일 귀찮은 일」을 직접 여쭙습니다. 지난 한 달 실제로 있었던 일만 듣습니다.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step-num">2</span>
+                    <h3>찾아보기</h3>
+                    <p>이미 있는 앱·서비스부터 찾습니다. 맞는 게 있으면 세팅해 드리는 것으로 끝입니다.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step-num">3</span>
+                    <h3>만들기</h3>
+                    <p>없으면 AI로 첫 버전을 만듭니다. 시간이 넘치면 기간을 늘리지 않고 범위를 줄입니다.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step-num">4</span>
+                    <h3>건네기</h3>
+                    <p>이렇게 보내시면 되고, 언제까지 돌려드립니다. 1주 써 보시고 불편한 것 하나만 말씀해 주세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 약속 -->
+        <section id="promise" class="band-yellow">
+            <div class="container">
+                <h2 class="display section-title reveal">네 가지는 약속합니다</h2>
+                <div class="row promises">
+                    <div class="promise reveal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <div>
+                            <h3>쓰시던 도구 그대로</h3>
+                            <p>새 앱을 깔게 하지 않습니다. 메신저로 사진·음성을 보내시면 됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="promise reveal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        <div>
+                            <h3>1주 안에</h3>
+                            <p>말씀하신 일 하나를 1주 안에 쓸 수 있는 형태로 건네 드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="promise reveal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                        <div>
+                            <h3>고객 정보는 지우고 다룹니다</h3>
+                            <p>이름·전화번호·장비 번호는 가명으로 바꾸고, 주민등록번호와 신분증은 AI에 넣지 않습니다.</p>
+                        </div>
+                    </div>
+                    <div class="promise reveal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15202B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                        <div>
+                            <h3>안 쓰셔도 됩니다</h3>
+                            <p>계속 쓰시는 것만 남기고, 안 쓰시는 것은 정리합니다. 안 쓰신 것도 다음을 위한 정보입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 가명 처리 미리 보기: 버튼은 JS가 켜졌을 때만 보인다 -->
+                <div class="mask-demo reveal">
+                    <div class="mask-head">
+                        <p class="mask-label"><span data-mask-title>사장님이 보내신 메시지</span> <span class="mask-note">(지어낸 예시)</span></p>
+                        <button type="button" class="btn btn-yellow" data-mask-toggle hidden>AI에 넣기 전 모습 보기</button>
+                    </div>
+                    <p class="mask-message" aria-live="polite">
+                        <span data-mask="[고객A]">김철수</span> 사장님(<span data-mask="[전화번호]">010-1234-5678</span>) 굴삭기 <span data-mask="[장비1]">서울 12가 3456</span>, 다음 주 화요일 오전 정비 요청
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 지금 단계 -->
+        <section id="now" class="container section">
+            <p class="eyebrow">지금 단계</p>
+            <h2 class="display section-title reveal">지금은 건설기계 업종에서 시험하고 있습니다</h2>
+            <p class="now-lead">결과가 나오기 전에는 돈을 받지 않습니다. 실제로 계속 쓰이는지를 먼저 확인합니다.</p>
+            <ol class="row stages">
+                <li class="reveal stage stage-current">
+                    <p class="stage-when">지금 · 2026년 10~11월</p>
+                    <h3>개인사업자 1곳과 시범 운영</h3>
+                    <p>건설기계 매매·중장비업. 무료로 진행하며, 몇 번 쓰셨는지로 효과를 봅니다.</p>
+                </li>
+                <li class="reveal stage">
+                    <p class="stage-when">다음 · 2026년 12월~2027년 2월</p>
+                    <h3>같은 업종 2~3곳으로</h3>
+                    <p>한 곳에서 통한 방법이 같은 일을 하는 다른 분께도 통하는지 확인합니다.</p>
+                </li>
+                <li class="reveal stage stage-later">
+                    <p class="stage-when">그다음 · 사업자 등록 후</p>
+                    <h3>정식 운영</h3>
+                    <p>계속 쓰시는 분이 생기면 그때 형태와 가격을 정합니다.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- 마무리 -->
+        <section class="band-gray">
+            <div class="container row closing">
+                <div class="closing-text reveal">
+                    <h2 class="display closing-title">건설기계 일을 하고 계신가요?</h2>
+                    <p>지금은 신청을 받지 않습니다. 시범 결과가 정리되면 같은 업종 분들께 먼저 알려 드리겠습니다.</p>
+                </div>
+                <p class="contact-slot">[연락처 — 공개할 주소가 정해지면 넣기]</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>© 2026 AI력 사무소 · 김민석</span>
+            <span>이 페이지는 공개 전 시안입니다</span>
+        </div>
+    </footer>
+
+</body>
+</html>
